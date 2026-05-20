@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prince Electronics — Buy AC, Refrigerators, Mobile Phones, Washing Machines & Home Appliances at best price. Order on WhatsApp today.">
+  <meta name="keywords" content="Prince Electronics, buy AC, refrigerator shop, mobile phones, washing machine, home appliances, electronics store">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Prince Electronics | Buy AC • Fridge • Mobile • Appliances">
+  <meta property="og:description" content="Genuine products. Best prices. Warranty support. Order on WhatsApp.">
+  <meta property="og:type" content="website">
+  <title>Prince Electronics | Buy AC • Fridge • Mobile • Appliances — Order on WhatsApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0e14;
+      --bg-card: rgba(255, 255, 255, 0.04);
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --neon-green: #00ff88;
+      --neon-cyan: #00e5ff;
+      --accent: #00ffaa;
+      --accent-dim: rgba(0, 255, 170, 0.15);
+      --text: #f0f4f8;
+      --text-muted: #94a3b8;
+      --gradient: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+      --shadow-glow: 0 0 40px rgba(0, 255, 170, 0.25);
+      --font: 'Poppins', 'Inter', system-ui, sans-serif;
+      --radius: 16px;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0.75rem 0;
+      background: rgba(10, 14, 20, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-glass);
+      transition: var(--transition);
+    }
+    .header.scrolled { background: rgba(10, 14, 20, 0.95); }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .logo-img {
+      height: 48px;
+      width: auto;
+      max-width: min(200px, 48vw);
+      object-fit: contain;
+    }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 50px;
+      background: var(--gradient);
+      color: #0a0e14;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .header-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+    .header-cta svg { width: 18px; height: 18px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.75rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .btn-primary {
+      background: var(--gradient);
+      color: #0a0e14;
+      box-shadow: 0 4px 24px rgba(0, 255, 170, 0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: var(--shadow-glow);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid rgba(0, 255, 170, 0.4);
+    }
+    .btn-outline:hover {
+      background: var(--accent-dim);
+      border-color: var(--neon-green);
+    }
+    .btn-whatsapp svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 0 4rem;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-slides {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1.6s ease-in-out;
+      transform: scale(1.04);
+    }
+    .hero-slide.is-active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10, 14, 20, 0.35) 0%, rgba(10, 14, 20, 0.75) 45%, rgba(10, 14, 20, 0.95) 85%, var(--bg-dark) 100%),
+        linear-gradient(135deg, rgba(0, 255, 170, 0.12) 0%, transparent 45%),
+        linear-gradient(225deg, rgba(0, 229, 255, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-overlay::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 90% 60% at 50% 20%, rgba(0, 229, 255, 0.15), transparent 65%);
+    }
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.45;
+      pointer-events: none;
+      animation: orbFloat 12s ease-in-out infinite;
+    }
+    .hero-orb-1 {
+      width: 320px;
+      height: 320px;
+      background: var(--neon-green);
+      top: 10%;
+      left: -8%;
+      animation-delay: 0s;
+    }
+    .hero-orb-2 {
+      width: 280px;
+      height: 280px;
+      background: var(--neon-cyan);
+      bottom: 20%;
+      right: -5%;
+      animation-delay: -4s;
+    }
+    @keyframes orbFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(20px, -30px) scale(1.08); }
+    }
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      animation: fadeUp 0.8s 0.5s ease both;
+    }
+    .hero-stat {
+      padding: 0.65rem 1.1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(12px);
+      font-size: 0.8rem;
+    }
+    .hero-stat strong {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide { transition: none; }
+      .hero-slide:not(:first-child) { display: none; }
+      .hero-slide:first-child { opacity: 1; }
+      .hero-orb { display: none; }
+    }
+    .hero-brand {
+      margin: 0 auto 0.5rem;
+      max-width: 340px;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+    .hero-brand img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.45));
+    }
+
+    /* WhatsApp quick enquiry modal */
+    .wa-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .wa-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .wa-modal-box {
+      width: min(440px, 100%);
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      border-radius: calc(var(--radius) + 4px);
+      background: #121820;
+      border: 1px solid rgba(0, 255, 170, 0.25);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), var(--shadow-glow);
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.35s ease;
+    }
+    .wa-modal.is-open .wa-modal-box {
+      transform: translateY(0) scale(1);
+    }
+    .wa-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 36px;
+      height: 36px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      font-size: 1.25rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .wa-modal-box { position: relative; }
+    .wa-modal-box h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+    .wa-modal-box > p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .wa-modal .form-group { margin-bottom: 1rem; }
+    .wa-modal-submit { width: 100%; margin-top: 0.25rem; }
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--neon-cyan);
+      background: rgba(0, 229, 255, 0.1);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 50px;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-sub {
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+    .hero-tags {
+      font-size: 0.9rem;
+      color: var(--neon-green);
+      font-weight: 500;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.8s 0.25s ease both;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      animation: fadeUp 0.8s 0.35s ease both;
+    }
+    .hero-urgency {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+    .hero-urgency strong { color: var(--neon-green); }
+
+    /* Sections */
+    section { padding: 5rem 0; }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-header h2 {
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--neon-cyan);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Products */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .product-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(12px);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .product-card:hover {
+      border-color: rgba(0, 255, 170, 0.35);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-glow);
+    }
+    .product-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .product-card:hover .product-img img { transform: scale(1.08); }
+    .product-body { padding: 1.25rem 1.5rem 1.5rem; }
+    .product-body h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .product-body p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .product-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--neon-green);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: gap 0.3s ease;
+    }
+    .product-card:hover .product-link { gap: 0.6rem; }
+
+    /* Trust */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .trust-item {
+      text-align: center;
+      padding: 2rem 1.25rem;
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(12px);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .trust-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .trust-item:hover {
+      border-color: rgba(0, 255, 170, 0.3);
+      background: rgba(0, 255, 170, 0.05);
+    }
+    .trust-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: var(--accent-dim);
+      font-size: 1.5rem;
+    }
+    .trust-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+    .trust-item p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Form */
+  .form-section {
+      background: linear-gradient(180deg, transparent, rgba(0, 255, 170, 0.03), transparent);
+    }
+    .form-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+      border-radius: calc(var(--radius) + 4px);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-glass);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+    }
+    .form-group { margin-bottom: 1.15rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--text);
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-glass);
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--neon-green);
+      box-shadow: 0 0 0 3px rgba(0, 255, 170, 0.15);
+    }
+    .form-group input.error,
+    .form-group select.error,
+    .form-group textarea.error {
+      border-color: #ff4757;
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-error {
+      font-size: 0.75rem;
+      color: #ff6b7a;
+      margin-top: 0.3rem;
+      display: none;
+    }
+    .form-group.has-error .form-error { display: block; }
+    .form-submit { width: 100%; margin-top: 0.5rem; }
+    .form-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .cta-box {
+      padding: 3rem 2rem;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(0, 255, 170, 0.12), rgba(0, 229, 255, 0.08)),
+        var(--bg-card);
+      border: 1px solid rgba(0, 255, 170, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(0, 255, 170, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    .cta-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 3rem 0 1.5rem;
+      border-top: 1px solid var(--border-glass);
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .footer h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+    .footer p, .footer a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .footer a:hover { color: var(--neon-green); }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-glass);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Floating WhatsApp */
+    .float-wa {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-glow);
+      transition: var(--transition);
+      animation: pulse 2.5s infinite;
+    }
+    .float-wa:hover {
+      transform: scale(1.1);
+    }
+    .float-wa svg { width: 30px; height: 30px; color: #0a0e14; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 170, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(0, 255, 170, 0); }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 5.5rem; }
+      .form-wrapper { padding: 1.75rem 1.25rem; }
+      .header-cta span.hide-mobile { display: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ElectronicsStore",
+    "name": "Prince Electronics",
+    "description": "Buy AC, Refrigerators, Mobile Phones, Washing Machines and Home Appliances",
+    "telephone": "+91-9796639516",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Your City",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-link">
+        <img src="assets/prince-electronics-logo.png" class="logo-img" alt="Prince Electronics — Trust, Quality, Service" width="220" height="72" loading="eager">
+      </a>
+      <a href="#" class="header-cta btn-whatsapp" data-purpose="Buy Product — General Enquiry">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="hide-mobile">Shop Now</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide is-active" style="background-image:url('https://images.unsplash.com/photo-1631545917664-2d0e4fc3f45b?w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=1920&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1498044199941-17dd53729b8d?w=1920&q=80')"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+    </div>
+    <div class="container hero-content">
+      <h1 class="hero-brand">
+        <img src="assets/prince-electronics-logo.png" alt="Prince Electronics — Trust, Quality, Service" width="360" height="140" loading="eager" fetchpriority="high">
+      </h1>
+      <p class="hero-sub">Buy genuine AC, Fridge, Mobile & Home Appliances</p>
+      <p class="hero-tags">AC • Refrigerator • Mobile • Washing Machine • Appliances</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-primary btn-whatsapp" data-purpose="Buy Product — General Enquiry">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a href="#products" class="btn btn-outline">Browse Products</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>500+</strong> Happy Buyers</div>
+        <div class="hero-stat"><strong>Best</strong> Market Prices</div>
+        <div class="hero-stat"><strong>100%</strong> Genuine Products</div>
+      </div>
+      <p class="hero-urgency"><strong>Today’s offers available</strong> — Get price on WhatsApp instantly</p>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Range</span>
+        <h2>Products We Sell</h2>
+        <p>Genuine brands. Best prices. Home delivery & warranty available.</p>
+      </div>
+      <div class="products-grid">
+        <article class="product-card" data-delay="0">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1631545917664-2d0e4fc3f45b?w=600&q=80" alt="Air Conditioners at Prince Electronics" loading="lazy" width="600" height="400">
+          </div>
+          <div class="product-body">
+            <h3>Air Conditioners</h3>
+            <p>Split & window AC from top brands. Free installation guidance & energy-efficient models.</p>
+            <a href="#" class="product-link btn-whatsapp" data-purpose="Buy Air Conditioner">Buy Now →</a>
+          </div>
+        </article>
+        <article class="product-card" data-delay="100">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80" alt="Refrigerators at Prince Electronics" loading="lazy" width="600" height="400">
+          </div>
+          <div class="product-body">
+            <h3>Refrigerators</h3>
+            <p>Single & double door fridges. Latest inverter technology with full warranty support.</p>
+            <a href="#" class="product-link btn-whatsapp" data-purpose="Buy Refrigerator">Buy Now →</a>
+          </div>
+        </article>
+        <article class="product-card" data-delay="200">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80" alt="Mobile Phones at Prince Electronics" loading="lazy" width="600" height="400">
+          </div>
+          <div class="product-body">
+            <h3>Mobile Phones</h3>
+            <p>Latest smartphones from trusted brands. Genuine products with bill & warranty.</p>
+            <a href="#" class="product-link btn-whatsapp" data-purpose="Buy Mobile Phone">Buy Now →</a>
+          </div>
+        </article>
+        <article class="product-card" data-delay="300">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80" alt="Washing Machines at Prince Electronics" loading="lazy" width="600" height="400">
+          </div>
+          <div class="product-body">
+            <h3>Washing Machines</h3>
+            <p>Fully automatic & semi-automatic washers. Front & top load options available.</p>
+            <a href="#" class="product-link btn-whatsapp" data-purpose="Buy Washing Machine">Buy Now →</a>
+          </div>
+        </article>
+        <article class="product-card" data-delay="400">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Home Appliances at Prince Electronics" loading="lazy" width="600" height="400">
+          </div>
+          <div class="product-body">
+            <h3>Home Appliances</h3>
+            <p>TV, microwave, mixer, geyser & more. Latest models with bill & full warranty.</p>
+            <a href="#" class="product-link btn-whatsapp" data-purpose="Buy Home Appliance">Buy Now →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Why Choose Us</span>
+        <h2>Built on Trust & Quality</h2>
+        <p>Thousands of happy customers rely on Prince Electronics</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item" data-delay="0">
+          <div class="trust-icon">⚡</div>
+          <h3>Fast Service</h3>
+          <p>Quick delivery, installation & responsive customer support.</p>
+        </div>
+        <div class="trust-item" data-delay="100">
+          <div class="trust-icon">✓</div>
+          <h3>Genuine Products</h3>
+          <p>100% authentic products with proper billing & documentation.</p>
+        </div>
+        <div class="trust-item" data-delay="200">
+          <div class="trust-icon">🛡</div>
+          <h3>Warranty Support</h3>
+          <p>Full manufacturer warranty assistance & after-sales care.</p>
+        </div>
+        <div class="trust-item" data-delay="300">
+          <div class="trust-icon">🔧</div>
+          <h3>Best Deals</h3>
+          <p>Competitive prices on all products — ask for today’s offer on WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to Buy?</h2>
+        <p>Get price, model options & availability on WhatsApp — quick reply guaranteed.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary btn-whatsapp" data-purpose="Buy Product — General Enquiry">Order on WhatsApp</a>
+          <a href="#" class="btn btn-outline btn-whatsapp" data-purpose="Get Product Price / Quote">Get Price</a>
+          <a href="#lead-form" class="btn btn-outline">Fill Enquiry Form</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lead-form" class="form-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get Started</span>
+        <h2>Product Enquiry Form</h2>
+        <p>Enter your details — we open WhatsApp with your product enquiry ready to send</p>
+      </div>
+      <form class="form-wrapper reveal" id="leadForm" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" required>
+          <span class="form-error">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" autocomplete="tel" required>
+          <span class="form-error">Enter a valid 10-digit phone number</span>
+        </div>
+        <div class="form-group">
+          <label for="address">Address *</label>
+          <input type="text" id="address" name="address" placeholder="Your area / full address" autocomplete="street-address" required>
+          <span class="form-error">Please enter your address</span>
+        </div>
+        <div class="form-group">
+          <label for="purpose">Purpose of Contact *</label>
+          <select id="purpose" name="purpose" required>
+            <option value="">What do you want to buy?</option>
+            <option value="Buy Air Conditioner">Buy Air Conditioner</option>
+            <option value="Buy Refrigerator">Buy Refrigerator</option>
+            <option value="Buy Mobile Phone">Buy Mobile Phone</option>
+            <option value="Buy Washing Machine">Buy Washing Machine</option>
+            <option value="Buy Home Appliance">Buy Home Appliance</option>
+            <option value="Get Product Price / Quote">Get Product Price / Quote</option>
+            <option value="Visit Store to Buy">Visit Store to Buy</option>
+            <option value="Other Product Enquiry">Other Product Enquiry</option>
+          </select>
+          <span class="form-error">Please select purpose of contact</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Model name, budget, or any product details (optional)"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-whatsapp form-submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Send Product Enquiry on WhatsApp
+        </button>
+        <p class="form-note">🔒 Your details are sent only via WhatsApp. No spam.</p>
+      </form>
+    </div>
+  </section>
+
+  <div class="wa-modal" id="waModal" aria-hidden="true">
+    <div class="wa-modal-box">
+      <button type="button" class="wa-modal-close" id="waModalClose" aria-label="Close">&times;</button>
+      <h3>Product Enquiry</h3>
+      <p>Enter your details — we will open WhatsApp with your message ready.</p>
+      <form id="waModalForm" novalidate>
+        <div class="form-group">
+          <label for="modalName">Full Name *</label>
+          <input type="text" id="modalName" placeholder="Your name" required>
+          <span class="form-error">Please enter your name</span>
+        </div>
+        <div class="form-group">
+          <label for="modalPhone">Mobile Number *</label>
+          <input type="tel" id="modalPhone" placeholder="10-digit mobile" required>
+          <span class="form-error">Enter valid 10-digit mobile</span>
+        </div>
+        <div class="form-group">
+          <label for="modalPurpose">Purpose of Contact *</label>
+          <select id="modalPurpose" required>
+            <option value="">What do you want to buy?</option>
+            <option value="Buy Air Conditioner">Buy Air Conditioner</option>
+            <option value="Buy Refrigerator">Buy Refrigerator</option>
+            <option value="Buy Mobile Phone">Buy Mobile Phone</option>
+            <option value="Buy Washing Machine">Buy Washing Machine</option>
+            <option value="Buy Home Appliance">Buy Home Appliance</option>
+            <option value="Get Product Price / Quote">Get Product Price / Quote</option>
+            <option value="Visit Store to Buy">Visit Store to Buy</option>
+            <option value="Buy Product — General Enquiry">Buy Product — General Enquiry</option>
+            <option value="Other Product Enquiry">Other Product Enquiry</option>
+          </select>
+          <span class="form-error">Please select purpose</span>
+        </div>
+        <div class="form-group">
+          <label for="modalMessage">Additional Details</label>
+          <textarea id="modalMessage" placeholder="Model, budget, quantity (optional)" rows="2"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary wa-modal-submit">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Open WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Prince Electronics</h3>
+          <p>Your trusted store to buy home electronics & appliances at the best price.</p>
+        </div>
+        <div>
+          <h3 style="-webkit-text-fill-color:var(--text);background:none;color:var(--text);font-size:0.95rem;">Location</h3>
+          <p>Khanyar chowk, Srinagar<br>JJammu and Kashmir, 190003 — India</p>
+mm        </div>
+        <div>
+          <h3 style="-webkit-text-fill-color:var(--text);background:none;color:var(--text);font-size:0.95rem;">Contact</h3>
+          <p>
+            <a href="tel:+919796639516">+91 97966 39516</a><br>
+            <a href="#" class="btn-whatsapp" data-purpose="Buy Product — General Enquiry">WhatsApp Us</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Prince Electronics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="float-wa btn-whatsapp" data-purpose="Buy Product — General Enquiry" aria-label="Order on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const CONFIG = { whatsappNumber: '919796639516' };
+
+    function buildWhatsAppURL(text) {
+      return 'https://wa.me/' + CONFIG.whatsappNumber + '?text=' + encodeURIComponent(text);
+    }
+
+    function buildProductEnquiry(data) {
+      return [
+        'New Product Enquiry - Prince Electronics',
+        '',
+        'Name: ' + (data.name || ''),
+        'Mobile: ' + (data.phone || ''),
+        'Purpose of Contact: ' + (data.purpose || ''),
+        'Address: ' + (data.address || 'Not provided'),
+        'Message: ' + (data.message || 'N/A')
+      ].join('\n');
+    }
+
+    function openWhatsApp(text) {
+      window.location.href = buildWhatsAppURL(text);
+    }
+
+    function isValidName(v) { return v.trim().length >= 2; }
+    function isValidPhone(v) { return /^[6-9]\d{9}$/.test(v.replace(/\D/g, '').slice(-10)); }
+
+    function setupFormValidation(formEl, fieldMap) {
+      function setError(key, hasError) {
+        var el = fieldMap[key].el;
+        var group = el.closest('.form-group');
+        el.classList.toggle('error', hasError);
+        group.classList.toggle('has-error', hasError);
+      }
+      function validateField(key) {
+        var valid = fieldMap[key].validate(fieldMap[key].el.value);
+        setError(key, !valid);
+        return valid;
+      }
+      Object.keys(fieldMap).forEach(function(key) {
+        fieldMap[key].el.addEventListener('blur', function() { validateField(key); });
+        fieldMap[key].el.addEventListener('input', function() {
+          if (fieldMap[key].el.classList.contains('error')) validateField(key);
+        });
+      });
+      return { validateAll: function() {
+        var ok = true;
+        Object.keys(fieldMap).forEach(function(key) {
+          if (!validateField(key)) ok = false;
+        });
+        return ok;
+      }, getValues: function() {
+        var out = {};
+        Object.keys(fieldMap).forEach(function(key) { out[key] = fieldMap[key].el.value; });
+        return out;
+      }};
+    }
+
+    var waModal = document.getElementById('waModal');
+    var waModalForm = document.getElementById('waModalForm');
+    var modalPurpose = document.getElementById('modalPurpose');
+
+    function openWaModal(purpose) {
+      if (purpose) modalPurpose.value = purpose;
+      waModal.classList.add('is-open');
+      waModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('modalName').focus();
+    }
+
+    function closeWaModal() {
+      waModal.classList.remove('is-open');
+      waModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('waModalClose').addEventListener('click', closeWaModal);
+    waModal.addEventListener('click', function(e) {
+      if (e.target === waModal) closeWaModal();
+    });
+
+    var modalValidator = setupFormValidation(waModalForm, {
+      name: { el: document.getElementById('modalName'), validate: isValidName },
+      phone: { el: document.getElementById('modalPhone'), validate: isValidPhone },
+      purpose: { el: modalPurpose, validate: function(v) { return v.trim().length > 0; } }
+    });
+
+    waModalForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!modalValidator.validateAll()) return;
+      var v = modalValidator.getValues();
+      openWhatsApp(buildProductEnquiry({
+        name: v.name.trim(),
+        phone: v.phone.replace(/\D/g, '').slice(-10),
+        purpose: v.purpose,
+        address: 'Not provided',
+        message: document.getElementById('modalMessage').value.trim() || 'N/A'
+      }));
+      closeWaModal();
+    });
+
+    document.querySelectorAll('.btn-whatsapp').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        if (btn.closest('#leadForm') || btn.closest('#waModalForm')) return;
+        e.preventDefault();
+        openWaModal(btn.dataset.purpose || '');
+      });
+    });
+
+    var leadForm = document.getElementById('leadForm');
+    var leadValidator = setupFormValidation(leadForm, {
+      name: { el: document.getElementById('name'), validate: isValidName },
+      phone: { el: document.getElementById('phone'), validate: isValidPhone },
+      address: { el: document.getElementById('address'), validate: function(v) { return v.trim().length >= 5; } },
+      purpose: { el: document.getElementById('purpose'), validate: function(v) { return v.trim().length > 0; } }
+    });
+
+    leadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (!leadValidator.validateAll()) return;
+      var v = leadValidator.getValues();
+      openWhatsApp(buildProductEnquiry({
+        name: v.name.trim(),
+        phone: v.phone.replace(/\D/g, '').slice(-10),
+        purpose: v.purpose,
+        address: v.address.trim(),
+        message: document.getElementById('message').value.trim() || 'N/A'
+      }));
+    });
+
+    document.querySelectorAll('[data-purpose]').forEach(function(el) {
+      if (el.classList.contains('btn-whatsapp')) return;
+    });
+
+    if (window.location.hash) {
+      var match = document.querySelector('option[value="' + decodeURIComponent(window.location.hash.slice(1)) + '"]');
+    }
+
+    var header = document.getElementById('header');
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('reveal')) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.product-card, .trust-item').forEach(function(el) {
+      var delay = el.dataset.delay || 0;
+      el.style.transition = 'opacity 0.6s ease ' + (delay / 1000) + 's, transform 0.6s ease ' + (delay / 1000) + 's, border-color 0.35s, box-shadow 0.35s, background 0.35s';
+      revealObserver.observe(el);
+    });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      revealObserver.observe(el);
+    });
+
+    var heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var si = 0;
+      setInterval(function() {
+        heroSlides[si].classList.remove('is-active');
+        si = (si + 1) % heroSlides.length;
+        heroSlides[si].classList.add('is-active');
+      }, 5500);
+    }
+
+    document.querySelectorAll('.product-link.btn-whatsapp').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var p = link.dataset.purpose;
+        document.getElementById('purpose').value = p;
+        openWaModal(p);
+      });
+    });
+  </script>
+</body>
+</html>
